@@ -1,6 +1,6 @@
 import groovy.io.FileType
 
-class SystemNumberScanner {
+class FileScanner {
 
 	public static String proglibDir =  "D:\\infolease\\il\\il.10.1\\proglib"
 	public static String csvFilePath = "D:\\Users\\ranjeet1\\Documents\\Tax Integration - System number enhancement\\Customers with System_Company Numbers.txt"
@@ -93,7 +93,7 @@ class SystemNumberScanner {
 					map["name"] = file
 					map["systemNumberOccurence"] = numberOfOccurence
 
-					if(SystemNumberScanner.programSet.contains(file.name)){
+					if(programSet.contains(file.name)){
 						if(!outFileName.contains("RefactorFor")){
 							outFileName = "RefactorFor-"+outFileName
 						}
